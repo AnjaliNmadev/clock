@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.clock{
+    position: relative;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background-color: rgb(43, 46, 49);
+    margin-top: 28%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 10px rgb(149, 167, 211),
+    -1px -2px 10px rgb(106, 172, 202);
+   
+    
+}
+.number{
+    color: aliceblue;
+    inset: 12px;     /* top and reght and left , bottom propert */
+    position: absolute;
+    transform: rotate(calc(30deg*var(--v)));   /* rotate no. 360 deg */
+    text-align: center;
+    
+}
+.number b{
+    transform: rotate(calc(-30deg*var(--v)));
+    display: inline-block;
+
+}
+.dot{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color:rgb(40, 42, 46);
+    border-radius: 50px;
+    box-shadow: 1px 2px 10px rgb(23, 24, 26),
+    -1px -2px 10px rgb(25, 25, 29);
+    z-index: 2;
+
+}
+.digital-clock{
+    position: absolute;
+    width: 32%;
+    height: 10%;
+    bottom: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius: 25px;
+    background: transparent;
+    box-shadow: inset 1px 2px 10px rgb(30, 30, 31),
+    -1px -2px 10px rgb(83, 84, 85);
+    gap: 2px;
+   color: aliceblue;
+
+}
+.dh{
+ color: rgb(145, 214, 241);
+}
+.dm{
+    color: rgb(8, 230, 93);
+}
+.ds{
+    color: rgb(252, 167, 11);
+}
+
+.hour-hand,.min-hand ,.sec-hand{
+    position: absolute;
+    transform-origin:bottom;
+    
+}
+.hour-hand{
+width: 1%;
+height: 30%;
+top: 20.5%;
+background-color: rgb(145, 214, 241);
+border-radius: 50px;
+
+}
+.min-hand{
+    width: 1%;
+height: 35%;
+top: 15.5%;
+background-color: rgb(8, 230, 93);
+border-radius: 50px;
+
+}
+.sec-hand{
+    width: 1%;
+height: 40%;
+top: 10.5%;
+background-color: rgb(252, 167, 11);
+border-radius: 50px;
+
+}
+@media only screen and (max-width:800px) {
+    .clock{
+        width: 60vw;
+        height: 60vw;
+       
+    }
+    .dot{
+        width: 35px;
+        height: 35px;
+    }
+    .number{
+        font-size: 10px;
+    }
+    .digital-clock
+    {
+        width: 30%;
+    height: 8%;
+       font-size: 10px;
+    }
+
+    
+}
